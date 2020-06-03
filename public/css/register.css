@@ -1,0 +1,12 @@
+#success_message{ display: none;}
+
+.btn.btn-warning{
+     background-color: #f82249;
+     color: white
+     border-color: #f82249
+   }
+.btn-warning{
+        background-image: linear-gradient(to bottom,#f82249 0,#f82249 100%);;
+        color: white
+        border-color: #f82249
+      }

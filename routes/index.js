@@ -1,4 +1,5 @@
 const route=require('express').Router();
+
 const formRoute=require('./form')
 
 route.get('/',(req,res)=>{
@@ -8,3 +9,4 @@ route.get('/',(req,res)=>{
 route.use('/register',formRoute);
 
 module.exports= route;   
+
