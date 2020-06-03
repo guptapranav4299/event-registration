@@ -1,11 +1,10 @@
 const route=require('express').Router();
+const formRoute=require('./form')
 
+route.get('/',(req,res)=>{
+    res.send("Welcome to index route")
+});
 
-//route for index.html 
-route.get("/",(req,res,next)=>{
-    res.send("Hello from index.html");
-})
+route.use('/register',formRoute);
 
-module.exports={
- route   
-}
+module.exports= route;   

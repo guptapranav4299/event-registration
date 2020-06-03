@@ -1,14 +1,22 @@
 const express=require('express');
 const srv=express();
+const path=require('path');
+const indexRoute=require('./routes/index');
+const adminRoute=require('./routes/admin');
 
 
 // fetch from public folder
-// srv.use(express_static(__dirname+'public'));
 
 
 // for handling post request
 srv.use(express.json());
 srv.use(express.urlencoded({extended:true}));
+
+
+srv.use('/', express.static(path.join(__dirname, 'public')));
+srv.use('/form',indexRoute);
+srv.use('/login',adminRoute);
+
 
 
 
